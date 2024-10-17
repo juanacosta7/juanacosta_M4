@@ -180,5 +180,35 @@
     );
     Query OK, 1 row affected (0.00 sec)
     </pre>
+    <h2>Viewing a table definition</h2>
+    <p>For basic information on table columns, use <code>DESC tablename</code>:</p>
+
+    <pre>
+    mysql> DESC example;
+    +-------+--------------+------+-----+---------+-------+
+    | Field | Type         | Null | Key | Default | Extra |
+    +-------+--------------+------+-----+---------+-------+
+    | id    | int(11)      | YES  |     | NULL    |       |
+    | data  | varchar(100) | YES  |     | NULL    |       |
+    +-------+--------------+------+-----+---------+-------+
+    2 rows in set (0.00 sec)
+        </pre>
+
+        <p>Exact definition of the table:</p>
+
+        <pre>
+    mysql> SHOW CREATE TABLE example;
+    +---------+-----------------------------------------------------------------+
+    | Table   | Create Table                                                    |
+    +---------+-----------------------------------------------------------------+
+    | example | CREATE TABLE `example` (                                         |
+    |         |   `id` int(11) default NULL,                                     |
+    |         |   `data` varchar(100) default NULL                               |
+    |         | ) ENGINE=MyISAM DEFAULT CHARSET=latin1                           |
+    +---------+-----------------------------------------------------------------+
+    1 row in set (0.00 sec)
+
+    (this example from MySQL 4.1)
+    </pre>
 </body>
 </html>
