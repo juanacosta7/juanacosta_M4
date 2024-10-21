@@ -1,21 +1,87 @@
 <!DOCTYPE html>
-<html lang="es:es">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Tablas</title>
-    <style>table,
-    td,
-    th  {
-        border: 1px solid black;
-    }
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo de HTML</title>
+    <style>
+        .table1, .table2 {
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        .table1 td, .table2 td {
+            border: 1px solid black;
+            padding: 5px;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+            border: 1px solid black;
+        }
+
+        .grid-item {
+            border: 1px solid black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 10px;
+        }
+
+        .checkmark {
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+        .checkmark img {
+            width: 50px;
+            height: 50px;
+        }
     </style>
 </head>
 <body>
-    <table>
-        <thead>
-            <tr>
-               <th>Name</th> 
-            </tr>
-        </thead>
+
+    <!-- Primera tabla -->
+    <table class="table1">
+        <tr>
+            <td>Name</td>
+            <td>Telephone</td>
+        </tr>
+        <tr>
+            <td>Bill Gates</td>
+            <td>555 77 854</td>
+            <td>555 77 855</td>
+        </tr>
     </table>
-</body>
+
+    <!-- Segunda tabla -->
+    <table class="table2">
+        <tr>
+            <td>First Name:</td>
+            <td>Bill Gates</td>
+        </tr>
+        <tr>
+            <td>Telephone:</td>
+            <td>555 77 854</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>555 77 855</td>
+        </tr>
+    </table>
+
+    <!-- Grid con filas y columnas -->
+    <div class="grid-container">
+        <div class="grid-item">First</div>
+        <div class="grid-item">Row</div>
+        <div class="grid-item">Second</div>
+        <div class="grid-item">Row</div>
+    </div>
+
+    <!-- Checkmarks -->
+    <div class="checkmark">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Yes_Check_Circle.svg/1024px-Yes_Check_Circle.svg.png" alt="Checkmark 1">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Yes_Check_Circle.svg/1024px-Yes_Check_Circle.svg.png" alt="Checkmark 2">
+    </
