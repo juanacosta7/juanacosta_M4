@@ -3,51 +3,73 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ejemplo de HTML</title>
+    <title>Replicación de la imagen</title>
     <style>
-        .table1, .table2 {
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        /* Estilos generales para tablas */
+        table {
             border-collapse: collapse;
+            width: 300px;
             margin-bottom: 20px;
         }
 
-        .table1 td, .table2 td {
+        th, td {
             border: 1px solid black;
-            padding: 5px;
+            padding: 10px;
+            text-align: center;
         }
 
-        .grid-container {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 10px;
-            border: 1px solid black;
-        }
-
-        .grid-item {
-            border: 1px solid black;
+        /* Contenedor de la disposición de los elementos inferiores */
+        .layout {
             display: flex;
-            justify-content: center;
-            align-items: center;
+            justify-content: space-between;
+            margin-top: 20px;
+            width: 600px; /* Ajustar el ancho para alinear las tablas y los checks */
+        }
+
+        /* Estilos para la cuadrícula de dos filas y dos columnas */
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            gap: 0;
+            width: 150px;
+            text-align: center;
+            border: 1px solid black;
+        }
+
+        .grid div {
+            border: 1px solid black;
             padding: 10px;
         }
 
-        .checkmark {
+        /* Estilos de los contenedores de los checkmarks */
+        .checkmark-container {
             display: flex;
-            justify-content: space-evenly;
+            justify-content: center;
+            align-items: center;
+            width: 80px;
+            height: 150px;
+            border: 1px solid black;
         }
 
-        .checkmark img {
-            width: 50px;
-            height: 50px;
+        /* Color y tamaño del checkmark */
+        .checkmark {
+            font-size: 60px;
+            color: green; /* Cambiar el color del check a verde */
         }
     </style>
 </head>
 <body>
 
     <!-- Primera tabla -->
-    <table class="table1">
+    <table>
         <tr>
-            <td>Name</td>
-            <td>Telephone</td>
+            <th>Name</th>
+            <th>Telephone</th>
         </tr>
         <tr>
             <td>Bill Gates</td>
@@ -57,7 +79,7 @@
     </table>
 
     <!-- Segunda tabla -->
-    <table class="table2">
+    <table>
         <tr>
             <td>First Name:</td>
             <td>Bill Gates</td>
@@ -72,16 +94,36 @@
         </tr>
     </table>
 
-    <!-- Grid con filas y columnas -->
-    <div class="grid-container">
-        <div class="grid-item">First</div>
-        <div class="grid-item">Row</div>
-        <div class="grid-item">Second</div>
-        <div class="grid-item">Row</div>
+    <!-- Tercera sección con layout -->
+    <div class="layout">
+        <!-- Primera tabla pequeña -->
+        <table>
+            <tr>
+                <td>First</td>
+                <td>Row</td>
+            </tr>
+            <tr>
+                <td>Second</td>
+                <td>Row</td>
+            </tr>
+        </table>
+
+        <!-- Cuadrícula -->
+        <div class="grid">
+            <div>First</div>
+            <div>Row</div>
+            <div>Second</div>
+            <div>Row</div>
+        </div>
+
+        <!-- Checkmarks -->
+        <div class="checkmark-container">
+            <div class="checkmark">✔</div>
+        </div>
+        <div class="checkmark-container">
+            <div class="checkmark">✔</div>
+        </div>
     </div>
 
-    <!-- Checkmarks -->
-    <div class="checkmark">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Yes_Check_Circle.svg/1024px-Yes_Check_Circle.svg.png" alt="Checkmark 1">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Yes_Check_Circle.svg/1024px-Yes_Check_Circle.svg.png" alt="Checkmark 2">
-    </
+</body>
+</html>
