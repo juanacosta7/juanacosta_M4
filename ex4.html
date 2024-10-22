@@ -9,7 +9,6 @@
             font-family: Arial, sans-serif;
         }
 
-        /* Estilos generales para tablas */
         table {
             border-collapse: collapse;
             width: 300px;
@@ -22,15 +21,13 @@
             text-align: center;
         }
 
-        /* Contenedor de la disposición de los elementos inferiores */
         .layout {
             display: flex;
             justify-content: space-between;
             margin-top: 20px;
-            width: 600px; /* Ajustar el ancho para alinear las tablas y los checks */
+            width: 600px; 
         }
 
-        /* Estilos para la cuadrícula de dos filas y dos columnas */
         .grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -46,7 +43,6 @@
             padding: 10px;
         }
 
-        /* Estilos de los contenedores de los checkmarks */
         .checkmark-container {
             display: flex;
             justify-content: center;
@@ -56,16 +52,14 @@
             border: 1px solid black;
         }
 
-        /* Color y tamaño del checkmark */
         .checkmark {
             font-size: 60px;
-            color: green; /* Cambiar el color del check a verde */
+            color: green;
         }
     </style>
 </head>
 <body>
 
-    <!-- Primera tabla -->
     <table>
         <tr>
             <th>Name</th>
@@ -78,7 +72,6 @@
         </tr>
     </table>
 
-    <!-- Segunda tabla -->
     <table>
         <tr>
             <td>First Name:</td>
@@ -94,9 +87,7 @@
         </tr>
     </table>
 
-    <!-- Tercera sección con layout -->
     <div class="layout">
-        <!-- Primera tabla pequeña -->
         <table>
             <tr>
                 <td>First</td>
@@ -108,7 +99,6 @@
             </tr>
         </table>
 
-        <!-- Cuadrícula -->
         <div class="grid">
             <div>First</div>
             <div>Row</div>
@@ -116,7 +106,6 @@
             <div>Row</div>
         </div>
 
-        <!-- Checkmarks -->
         <div class="checkmark-container">
             <div class="checkmark">✔</div>
         </div>
