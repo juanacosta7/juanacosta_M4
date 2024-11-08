@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulari de Contacte</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: lightblue;
+        }
+        form {
+            background-color: white;
+            padding: 35px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px black;
+            width: 300px;
+        }
+        label {
+            margin-top: 10px;
+            display: block;
+        }
+        input[type="text"],
+        input[type="email"],
+        textarea {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            border: 1px solid lightgrey;
+            border-radius: 3px;
+        }
+        button {
+            margin-top: 10px;
+            padding: 10px;
+            background-color: lightgray;
+            color: black;
+            border: black;
+            border-radius: 5px;
+            cursor: unset;
+            width: 20%;
+        }
+    </style>
+</head>
+<body>
+    <form action="#" method="POST">
+        <label for="nombre">Nom:</label>
+        <input type="text" id="nombre" name="nombre" required>
+
+        <label for="correo">Correu Electrònic:</label>
+        <input type="email" id="correo" name="correo" required>
+
+        <label for="mensaje">Missatge:</label>
+        <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+
+        <button type="submit"><b>Enviar</b></button>
+    </form>
+</body>
+</html>
