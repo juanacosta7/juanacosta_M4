@@ -1,0 +1,28 @@
+
+body {
+    background-color: aqua;
+}
+
+p {
+    font-size: 20px;
+    color: blue;
+    margin: 20px;
+    font-family: Verdana;
+}
+
+.centrado {
+    text-align: center;
+}
+
+.derecha {
+    text-align: right;
+}
+
+.plata {
+    background-color: silver;
+    padding: 10px;
+}
+
+.alineado {
+    color: red;
+}
